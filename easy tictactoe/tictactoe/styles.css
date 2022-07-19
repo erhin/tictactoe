@@ -1,0 +1,114 @@
+#board {
+  width: 306px;
+  height: 306px;
+  margin: auto;
+}
+
+div#message {
+  display: none;
+  margin: auto;
+  width: 306px;
+  height: 306px;
+  background-color: rgba(0, 0, 0, 0.01);
+  font-size: 50px;
+  color: black;
+}
+
+p#pMessage {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+#restart {
+  display: flex;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: auto;
+  margin-top: 50px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+#restart {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+}
+#restart:hover {
+  background-color: #555555;
+  color: white;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  float: left;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.cell:hover {
+  background-color: rgba(230, 230, 230, 0.1);
+}
+
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+  border-top: none;
+}
+
+.cell:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.cell:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.cell:last-child,
+.cell:nth-child(8),
+.cell:nth-child(7) {
+  border-bottom: none;
+}
+.x::before {
+  content: "";
+  position: absolute;
+  background-color: red;
+  transform: rotate(45deg);
+  width: 100px;
+  height: 10px;
+}
+
+.x::after {
+  content: "";
+  position: absolute;
+  background-color: red;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 100px;
+}
+
+.o::before {
+  content: "";
+  position: absolute;
+  background-color: blue;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+.o::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
